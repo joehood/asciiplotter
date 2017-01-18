@@ -1,7 +1,7 @@
 # AsciiPlotter
 Quick-n-dirty scientific plotting in the c++ console
 
-![alt tag](https://raw.githubusercontent.com/joehood/asciiplotter/master/damped.png)
+![alt tag](https://raw.githubusercontent.com/joehood/asciiplotter/master/dampedsine.png)
 
 ``` cpp
 AsciiPlotter plotter("Damped Sine Waves", 120, 20);
