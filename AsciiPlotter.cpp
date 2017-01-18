@@ -1,3 +1,26 @@
+/*
+MIT License
+
+Copyright (c) 2017  Joe Hood
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
 
 #include<iostream>
 #include<stdio.h>
@@ -179,7 +202,6 @@ void AsciiPlotter::addPlot(vector<double> xdata, vector<double> ydata, string la
 	_markers[_curves] = marker;
 	_labels[_curves] = label;
 	_ydata[_curves++] = ydata;
-
 }
 
 void AsciiPlotter::show()
@@ -246,6 +268,8 @@ void AsciiPlotter::show()
 	}
 
 	cout << _title << endl << endl;
+	
+	// main plot plane:
 
 	printf(" %8.2g +", ymax);
 
@@ -318,6 +342,8 @@ void AsciiPlotter::show()
 	printf("%8.2g", xmax);
 
 	cout << endl << endl;
+	
+	// legend:
 
 	if (_legend)
 	{
@@ -346,7 +372,6 @@ void AsciiPlotter::show()
 		}
 		cout << "+" << endl;
 	}
-
 }
 
 void AsciiPlotter::xlabel(string label)
@@ -389,6 +414,8 @@ void AsciiPlotter::example()
 	}
 
 	_title = "Three Phase Currents";
+	_height = 20;
+	
 	AsciiPlotter::addPlot(t, a, "Ia", '.');
 	AsciiPlotter::addPlot(t, b, "Ib", 'x');
 	AsciiPlotter::addPlot(t, c, "Ic", '*');
@@ -397,8 +424,6 @@ void AsciiPlotter::example()
 	AsciiPlotter::ylabel("I (A)");
 	AsciiPlotter::show();
 
-
-	_height = 20;
 	vector<double> x(101);
 	vector<double> f(101);
 
@@ -416,15 +441,13 @@ void AsciiPlotter::example()
 
 	_curves = 0;
 	_title = "FM Signal";
+	
 	AsciiPlotter::addPlot(t, x, "Signal", 'x');
-
 
 	AsciiPlotter::legend();
 	AsciiPlotter::xlabel("t (s)");
 	AsciiPlotter::ylabel("");
 	AsciiPlotter::show();
-
-
 
 	vector<double> x1(101);
 	vector<double> x2(101);
@@ -443,6 +466,7 @@ void AsciiPlotter::example()
 
 	_curves = 0;
 	_title = "Dampened Sine Waves with Envelope";
+	
 	AsciiPlotter::addPlot(t, x1, "sin(t) * exp(-t/10)", '*');
 	AsciiPlotter::addPlot(t, x2, "cos(t) * exp(-t/10)", 'x');
 
