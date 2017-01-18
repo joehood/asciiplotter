@@ -6,6 +6,7 @@ Quick-n-dirty scientific plotting in the c++ console
 ``` cpp
 AsciiPlotter plotter("Damped Sine Waves", 120, 20);
 vector<double> t(101);
+vector<double> x1(101);
 vector<double> x2(101);
 double dt = 0.2;
 
