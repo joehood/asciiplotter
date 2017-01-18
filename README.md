@@ -1,6 +1,8 @@
 # AsciiPlotter
 Quick-n-dirty scientific plotting in the c++ console
 
+![alt tag](https://raw.githubusercontent.com/joehood/asciiplotter/master/circuitsim.png)
+
 ![alt tag](https://raw.githubusercontent.com/joehood/asciiplotter/master/dampedsine.png)
 
 ``` cpp
