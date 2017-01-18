@@ -1,6 +1,6 @@
 
 #include<iostream>
-#include "AsciiPlotter.h"
+#include "asciiplotter.h"
 
 using namespace std;
 
