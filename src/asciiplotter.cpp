@@ -26,7 +26,7 @@ SOFTWARE.
 #include<stdio.h>
 #include<math.h>
 #include<vector>
-#include "AsciiPlotter.h"
+#include "asciiplotter.h"
 
 using namespace std;
 
